@@ -1,19 +1,114 @@
-/* charity: water Brand Colors & Fonts
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #ffffff;
+  color: #333;
+}
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
-Fonts:
-- Proxima Nova
-- Avenir
+.navbar {
+  padding: 20px 0;
+}
 
-*/
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.logo span {
+  color: #f9c74f;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #f9c74f;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hero-content {
+  background-color: rgba(134, 133, 133, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  flex: 1;
+}
+
+.hero-content h2 {
+  color: #0077b6;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  color: #0077b6;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #0077b6;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #023e8a;
+}
+
+/* Floating Images - STAGGERED */
+.hero-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  align-items: flex-end;
+  padding: 10px;
+  position: relative;
+}
+
+.float-image {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Staggered positions */
+.float-image:first-child {
+  margin-top: 0;
+  z-index: 2;
+  transform: translateY(20px);
+}
+
+.float-image:last-child {
+  margin-top: 40px;
+  transform: translateY(40px);
+  z-index: 1;
+}
